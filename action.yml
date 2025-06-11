@@ -28,6 +28,6 @@ runs:
     - name: Run conversion script
       id: run-sarif
       run: |
-        python main.py "${{ inputs.file_in }}" "${{ inputs.file_out }}"
+        python entrypoint.py "${{ inputs.file_in }}" "${{ inputs.file_out }}"
         echo "exported_report=${{ inputs.file_out }}" >> "$GITHUB_OUTPUT"
       shell: bash
